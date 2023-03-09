@@ -1,3 +1,4 @@
+import MainContent from "../components/MainContent";
 import SideNav from "../components/SideNav";
 import { useThemeContext } from "../providers/ThemeProvider";
 
@@ -5,9 +6,9 @@ const Home = () => {
     const { colorMode } = useThemeContext();
 
     return (
-        <section className={`h-screen overflow-hidden ${colorMode}`}>
+        <section className={`h-screen overflow-hidden flex ${colorMode}`}>
             <SideNav />
-            <>HELLO</>
+            <MainContent />
         </section>
     );
 };

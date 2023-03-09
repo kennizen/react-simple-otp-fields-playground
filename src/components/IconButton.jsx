@@ -4,7 +4,7 @@ const IconButton = ({ children, onClick }) => {
     return (
         <div
             onClick={onClick}
-            className="p-2 rounded-full hover:bg-slate-200 transition-colors duration-300"
+            className="p-2 rounded-full hover:bg-primaryLight transition-colors duration-300"
         >
             {children}
         </div>
