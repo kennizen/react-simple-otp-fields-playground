@@ -6,7 +6,7 @@ const Home = () => {
     const { colorMode } = useThemeContext();
 
     return (
-        <section className={`h-screen overflow-hidden flex ${colorMode}`}>
+        <section className={`h-screen overflow-auto flex ${colorMode}`}>
             <SideNav />
             <MainContent />
         </section>

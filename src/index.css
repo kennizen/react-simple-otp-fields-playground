@@ -5,9 +5,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-    font-family: "Barlow", sans-serif;
-    font-family: "Oswald", sans-serif;
-    font-family: "Overpass", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 * {
@@ -15,7 +13,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 
 @tailwind base;
 @tailwind components;

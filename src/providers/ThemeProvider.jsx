@@ -1,6 +1,9 @@
 import { createContext, useCallback, useContext, useState } from "react";
 
-const Theme = createContext(null);
+const Theme = createContext({
+    colorMode: "",
+    handleSetColorMode: (mode) => {},
+});
 
 export const useThemeContext = () => {
     return useContext(Theme);
@@ -9,8 +12,8 @@ export const useThemeContext = () => {
 const ThemeProvider = ({ children }) => {
     const [colorMode, setColorMode] = useState("light");
 
-    const handleSetColorMode = useCallback(() => {
-        setColorMode((prev) => (prev === "light" ? "dark" : prev));
+    const handleSetColorMode = useCallback((mode) => {
+        setColorMode(mode);
     }, []);
 
     return <Theme.Provider value={{ colorMode, handleSetColorMode }}>{children}</Theme.Provider>;
