@@ -2,10 +2,18 @@ import React from "react";
 import { ReactComponent as DarkModeIcon } from "../assets/icons/dark_mode.svg";
 import { ReactComponent as LightModeIcon } from "../assets/icons/light_mode.svg";
 import { useThemeContext } from "../providers/ThemeProvider";
+import { useStore } from "../hooks/useStore";
 
 const ColorSchemeToggle = () => {
     // hooks
     const { colorMode, handleSetColorMode } = useThemeContext();
+    const { setValueInStore } = useStore();
+
+    // functions
+    function handleColorMode(mode) {
+        handleSetColorMode(mode);
+        setValueInStore("theme", mode);
+    }
 
     return (
         <div className="flex items-center gap-x-4 relative">
@@ -18,12 +26,12 @@ const ColorSchemeToggle = () => {
             ></div>
 
             <LightModeIcon
-                onClick={() => handleSetColorMode("light")}
+                onClick={() => handleColorMode("light")}
                 className={`relative z-10 fill-primaryLight`}
             />
 
             <DarkModeIcon
-                onClick={() => handleSetColorMode("dark")}
+                onClick={() => handleColorMode("dark")}
                 className={`relative z-10 fill-primaryDark`}
             />
         </div>
