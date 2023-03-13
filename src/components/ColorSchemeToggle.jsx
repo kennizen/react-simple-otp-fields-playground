@@ -16,7 +16,7 @@ const ColorSchemeToggle = () => {
     }
 
     return (
-        <div className="flex items-center gap-x-4 relative">
+        <div className="flex items-center gap-x-4 relative p-4">
             <div
                 className={`${
                     colorMode === "light"
