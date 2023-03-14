@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/lang-css": "^6.1.1",
+    "@uiw/react-codemirror": "^4.19.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-simple-otp-fields": "^0.0.14",

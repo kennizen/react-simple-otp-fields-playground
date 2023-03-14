@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { ReactComponent as DarkModeIcon } from "../assets/icons/dark_mode.svg";
 import { ReactComponent as LightModeIcon } from "../assets/icons/light_mode.svg";
 import { useThemeContext } from "../providers/ThemeProvider";
@@ -38,4 +38,4 @@ const ColorSchemeToggle = () => {
     );
 };
 
-export default ColorSchemeToggle;
+export default memo(ColorSchemeToggle);

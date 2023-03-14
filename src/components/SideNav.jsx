@@ -17,7 +17,7 @@ const SideNav = () => {
     }
 
     return (
-        <aside className="h-full w-96 bg-secondaryLight dark:bg-secondaryDark transition-colors duration-200 drop-shadow-sm">
+        <aside className="h-full w-80 bg-secondaryLight dark:bg-secondaryDark transition-colors duration-200 drop-shadow-sm">
             <div className="w-full flex items-center justify-end p-2">
                 <IconButton>
                     <MenuIcon className="fill-secondaryAccentLight dark:fill-secondaryAccentDark transition-colors duration-200" />
@@ -41,7 +41,7 @@ const SideNav = () => {
                 <CustomField
                     inputType="text"
                     label="Seperator"
-                    tooltip="A seperator between the input fields."
+                    tooltip="A seperator between the input fields. For this demo it is limited to only string values but it accepts any ReactNode."
                     value={otpState.seperator}
                     onChange={handleOnChange}
                 />
